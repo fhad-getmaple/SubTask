@@ -1,6 +1,6 @@
 /* @flow */
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView as View, Text } from 'react-native';
 
 import styles from './styles';
 
@@ -19,7 +19,7 @@ class Home extends Component {
 
     renderHeader() {
         return (
-            <View style={styles.header}>
+            <View contentContainerStyle={styles.header}>
                 <Text>September 14th 2017</Text>
             </View>
         );
@@ -30,7 +30,7 @@ class Home extends Component {
     }
 
     renderTask = (task: Object, index: number) => (
-        <View style={styles.task} key={index}>
+        <View contentContainerStyle={styles.task} key={index}>
             <Text style={styles.text}>{task.name}</Text>
             <Text style={styles.note}>{task.epic}</Text>
         </View>
